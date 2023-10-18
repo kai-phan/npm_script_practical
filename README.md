@@ -128,3 +128,22 @@ or
 ```
 
 `wait`: wait for all background jobs to finish before continuing
+
+### Run a set npm scripts with wildcard
+
+```
+"script" : {
+    "lint": "npm run lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier"
+}
+```
+
+```
+"script": {
+    "lint": "npm run lint:**",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint ."
+    "lint:css:fix": "stylefmt ."
+}
+```

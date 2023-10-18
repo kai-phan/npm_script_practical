@@ -9,9 +9,12 @@
     "eslint": "eslint --cache --fix ./",
     "bineslint": "./node_modules/.bin/eslint --cache --fix ./",
     "prettier": "prettier --write --tab-width=2 ./",
-    "lint": "npm run eslint && npm run prettier && echo \"lint done\"",
+    "lint": "npm-run-all lint:** prettier && echo \"lint done\"",
     "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait",
-    "lint-all": "npm-run-all -p eslint prettier && echo \"lint all done\""
+    "lint-all": "npm-run-all -p eslint prettier && echo \"lint all done\"",
+    "lint:js": "npm run eslint --cache --fix ./",
+    "lint:css": "stylelint --fix \"./**/*.css\"",
+    "lint:css:fmt": "stylefmt --recursive ./"
   },
   "keywords": [],
   "author": "kai",
@@ -21,6 +24,8 @@
     "prettier": "^3.0.3"
   },
   "dependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "stylefmt": "^6.0.3",
+    "stylelint": "^15.11.0"
   }
 }

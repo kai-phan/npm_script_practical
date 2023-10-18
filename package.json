@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "pretest": "echo \"pretest\"",
     "eslint": "eslint --cache --fix ./",
-    "bineslint": "./node_modules/.bin/eslint --cache --fix ./"
+    "bineslint": "./node_modules/.bin/eslint --cache --fix ./",
+    "prettier": "prettier --write --tab-width=2 ./",
+    "lint": "npm run eslint && npm run prettier && echo \"lint done\""
   },
   "keywords": [],
   "author": "kai",

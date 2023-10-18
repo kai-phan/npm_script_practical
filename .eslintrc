@@ -1,7 +1,12 @@
 {
   "rules": {
-    "complexity": [ 1, 5 ],
+    "complexity": [1, 5],
     "no-negated-condition": 1,
-    "no-param-reassign": [ 0, { "props": false } ]
+    "no-param-reassign": [
+      0,
+      {
+        "props": false
+      }
+    ]
   }
 }

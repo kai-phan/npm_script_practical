@@ -120,6 +120,7 @@ or
 ```
 
 ### Run scripts in parallel
+
 ```
 "script" : {
     "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait"

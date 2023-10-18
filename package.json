@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pretest": "echo \"pretest\"",
-    "eslint": "eslint --cache --fix ./",
+    "start": "node src/index.js",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "precoverage": "rm -rf ./coverage",
+    "postcoverage": "open ./coverage/lcov-report/index.html",
+    "eslint": "eslint --cache --fix src/",
     "bineslint": "./node_modules/.bin/eslint --cache --fix ./",
     "prettier": "prettier --write --tab-width=2 ./",
-    "lint": "npm-run-all lint:** prettier && echo \"lint done\"",
+    "lint": "npm-run-all lint:** prettier",
     "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait",
     "lint-all": "npm-run-all -p eslint prettier && echo \"lint all done\"",
-    "lint:js": "npm run eslint --cache --fix ./",
+    "lint:js": "npm run eslint",
     "lint:css": "stylelint --fix \"./**/*.css\"",
     "lint:css:fmt": "stylefmt --recursive ./"
   },
@@ -21,6 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.51.0",
+    "jest": "^29.7.0",
     "prettier": "^3.0.3"
   },
   "dependencies": {

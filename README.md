@@ -147,3 +147,14 @@ or
     "lint:css:fix": "stylefmt ."
 }
 ```
+
+### Use pre and post npm scripts lifecycle hook
+```
+"scripts": {
+    "pretest": "npm run lint",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "precoverage": "rm -rf ./coverage",
+    "postcoverage": "open ./coverage/lcov-report/index.html",
+}
+```

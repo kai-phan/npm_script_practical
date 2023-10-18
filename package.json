@@ -9,7 +9,8 @@
     "eslint": "eslint --cache --fix ./",
     "bineslint": "./node_modules/.bin/eslint --cache --fix ./",
     "prettier": "prettier --write --tab-width=2 ./",
-    "lint": "npm run eslint && npm run prettier && echo \"lint done\""
+    "lint": "npm run eslint && npm run prettier && echo \"lint done\"",
+    "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait"
   },
   "keywords": [],
   "author": "kai",

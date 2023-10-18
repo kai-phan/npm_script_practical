@@ -118,3 +118,12 @@ or
     "lint": "eslint . && prettier && echo 'linting done'",
 }
 ```
+
+### Run scripts in parallel
+```
+"script" : {
+    "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait"
+}
+```
+
+`wait`: wait for all background jobs to finish before continuing

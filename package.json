@@ -7,6 +7,8 @@
     "start": "node src/index.js",
     "pretest": "npm run lint",
     "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:ci": "npm run test:watch -- --ci",
     "coverage": "jest --coverage",
     "precoverage": "rm -rf ./coverage",
     "postcoverage": "open ./coverage/lcov-report/index.html",

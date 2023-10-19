@@ -149,6 +149,7 @@ or
 ```
 
 ### Use pre and post npm scripts lifecycle hook
+
 ```
 "scripts": {
     "pretest": "npm run lint",
@@ -156,5 +157,24 @@ or
     "coverage": "jest --coverage",
     "precoverage": "rm -rf ./coverage",
     "postcoverage": "open ./coverage/lcov-report/index.html",
+}
+```
+
+### Pass arguments to npm scripts
+
+```
+"scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage",
+    "test:coverage:watch": "npm run test -- --coverage --watch",
+}
+```
+or
+```
+"scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:watch:coverage": "npm run test:watch -- --coverage",
 }
 ```

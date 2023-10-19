@@ -170,11 +170,22 @@ or
     "test:coverage:watch": "npm run test -- --coverage --watch",
 }
 ```
+
 or
+
 ```
 "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "test:watch:coverage": "npm run test:watch -- --coverage",
+}
+```
+
+### Pipe npm scripts
+
+```
+"scripts": {
+    "prebuild:css": "npm run lint:css:fmt && rm -rf ./public/index.css",
+    "build:css": "node-sass src/index.css | postcss -o public/index.css"
 }
 ```

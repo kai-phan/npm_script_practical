@@ -205,3 +205,23 @@ or
     "log:name": "echo $npm_package_name"
 }
 ```
+
+### Custom config
+
+```
+"config": {
+    "port": 3030
+},
+```
+
+Any environment variables that start with npm_config_ will be interpreted as a configuration parameter. For example, putting npm_config_foo=bar in your environment will set the foo configuration parameter to bar. Any environment configurations that are not given a value will be given the value of true. Config values are case-insensitive, so NPM_CONFIG_FOO=bar will work the same. However, please note that inside scripts npm will set its own environment variables and Node will prefer those lowercase versions over any uppercase ones that you might set. For details see this issue.
+
+Notice that you need to use underscores instead of dashes, so --allow-same-version would become npm_config_allow_same_version=true.
+
+```bash
+$ npm config set <key> <value>
+```
+
+```bash
+$ npm config set port 3000
+```

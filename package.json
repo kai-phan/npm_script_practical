@@ -24,7 +24,9 @@
     "prebuild:css": "npm run lint:css:fmt && rm -rf ./public/index.css",
     "build:css": "node-sass src/index.css | postcss -o public/index.css",
     "watch:lint": "onchange \"./**/*.js\" \"./**/*.css\" -- npm run lint",
-    "watch:css": "onchange \"./**/*.css\" -- npm run build:css"
+    "watch:css": "onchange \"./**/*.css\" -- npm run build:css",
+    "log:env": "env | grep \"npm_package\"",
+    "log:pkgname": "echo $npm_package_name"
   },
   "keywords": [],
   "author": "kai",

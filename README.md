@@ -197,3 +197,11 @@ or
     "watch:css": "onchange 'src/**/*.css' -- echo 'from {{event}} to {{file}}'"
 }
 ```
+
+### package.json variables
+
+```
+"scripts": {
+    "log:name": "echo $npm_package_name"
+}
+```

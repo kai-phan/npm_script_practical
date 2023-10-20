@@ -189,3 +189,11 @@ or
     "build:css": "node-sass src/index.css | postcss -o public/index.css"
 }
 ```
+
+### Run npm scripts when file change
+
+```
+"scripts": {
+    "watch:css": "onchange 'src/**/*.css' -- echo 'from {{event}} to {{file}}'"
+}
+```

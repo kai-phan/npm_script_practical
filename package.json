@@ -22,7 +22,9 @@
     "lint:css": "stylelint --fix \"./**/*.css\"",
     "lint:css:fmt": "stylefmt --recursive ./",
     "prebuild:css": "npm run lint:css:fmt && rm -rf ./public/index.css",
-    "build:css": "node-sass src/index.css | postcss -o public/index.css"
+    "build:css": "node-sass src/index.css | postcss -o public/index.css",
+    "watch:lint": "onchange \"./**/*.js\" \"./**/*.css\" -- npm run lint",
+    "watch:css": "onchange \"./**/*.css\" -- npm run build:css"
   },
   "keywords": [],
   "author": "kai",
@@ -31,6 +33,7 @@
     "eslint": "^8.51.0",
     "jest": "^29.7.0",
     "node-sass": "^9.0.0",
+    "onchange": "^7.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3"
   },

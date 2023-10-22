@@ -37,8 +37,7 @@
     "log:port": "env | grep \"npm_package_config_port\"",
     "log:config": "npm config ls -l",
     "set:config": "npm config set npm_script_practical:port 3001",
-    "prepare": "husky install",
-    "precommit": "npm run lint"
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "kai",

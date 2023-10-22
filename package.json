@@ -36,7 +36,8 @@
     "log:pkgname": "echo $npm_package_name",
     "log:port": "env | grep \"npm_package_config_port\"",
     "log:config": "npm config ls -l",
-    "set:config": "npm config set npm_script_practical:port 3001"
+    "set:config": "npm config set npm_script_practical:port 3001",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "kai",
@@ -47,7 +48,8 @@
     "node-sass": "^9.0.0",
     "onchange": "^7.1.0",
     "postcss": "^8.4.31",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "http-server": "^14.1.1",

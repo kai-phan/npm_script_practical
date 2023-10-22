@@ -225,3 +225,30 @@ $ npm config set <key> <value>
 ```bash
 $ npm config set port 3000
 ```
+
+### Loglevel
+
+`npm run <script> --silent` to reduce logs and to prevent the script from throwing an error.
+
+short version
+
+- `npm run <script> -s`
+- `npm run <script> -q`: --quiet, --loglevel warn
+- `npm run <script> -d`: --loglevel info
+- `npm run <script> -dd`: --loglevel verbose
+- `npm run <script> -ddd`: --loglevel silly
+
+```
+"scripts": {
+    "log:level:silent": "npm run test --silent",
+    // or "log:level:silent": "npm run test -s",
+    // or "log:level:silent": "npm run test --loglevel silent",
+    "log:level:warn": "npm run --loglevel warn",
+    "log:level:error": "npm run --loglevel error",
+    "log:level:info": "npm run --loglevel info",
+    "log:level:http": "npm run --loglevel http",
+    "log:level:verbose": "npm run --loglevel verbose",
+    "log:level:silly": "npm run --loglevel silly",
+    "log:level:timing": "npm run --loglevel timing"
+}
+```

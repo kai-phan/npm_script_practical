@@ -26,7 +26,7 @@
     "lint-parallel": "npm run eslint & npm run prettier & echo \"lint parallel\" & wait",
     "lint-all": "npm-run-all -p eslint prettier && echo \"lint all done\"",
     "lint:js": "npm run eslint",
-    "lint:css": "stylelint --fix \"./**/*.css\"",
+    "lint:css": "stylelint --fix \"src/**/*.css\"",
     "lint:css:fmt": "stylefmt --recursive ./",
     "prebuild:css": "npm run lint:css:fmt && rm -rf ./public/index.css",
     "build:css": "node-sass src/index.css | postcss -o public/index.css",
@@ -38,7 +38,9 @@
     "log:config": "npm config ls -l",
     "set:config": "npm config set npm_script_practical:port 3001",
     "prepare": "husky install",
-    "prepush": "npm run lint-all && npm run test:ci"
+    "lint-verbose": "npm run lint --loglevel verbose",
+    "prettier:verbose": "npm run prettier --loglevel verbose",
+    "prettier:silent": "npm run prettier -s"
   },
   "keywords": [],
   "author": "kai",

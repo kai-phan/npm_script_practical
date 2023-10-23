@@ -252,3 +252,68 @@ short version
     "log:level:timing": "npm run --loglevel timing"
 }
 ```
+
+### Cross platform
+
+- `cross-env` - Run scripts that set and use environment variables across platforms
+
+```
+"scripts": {
+    "test": "cross-env NODE_ENV=test jest",
+}
+```
+
+- `rimraf` - A cross platform solution to remove the files and folders
+
+```
+"scripts": {
+    "clean": "rimraf ./dist",
+}
+```
+
+- or `del-cli` - Delete files and folders
+
+```
+"scripts": {
+    "clean": "del ./dist",
+}
+```
+
+- opn-cli - A better node-open. Opens stuff like websites, files, executables. Cross-platform.
+
+```
+"scripts": {
+    "open": "open-cli http://localhost:3000",
+}
+```
+
+- cross-var - Cross platform environment variables
+
+```
+"scripts": {
+    "//": "this one is for multiple commands, using string escaping",
+    "open": "cross-var \"http-server ./public -p $npm_package_config_port\"",
+    "//": "this one is for a single command",
+    "open": "cross-var http-server ./public -p $npm_package_config_port",
+}
+```
+
+### Use env variables
+
+The environment variables are accessible from the `process.env` object,
+
+```
+"scripts": {
+    "test": "NODE_ENV=test_env jest",
+}
+```
+
+### Use env variables with dotenv
+
+- `dotenv` - Loads environment variables from .env file
+
+```
+"scripts": {
+    "test": "dotenv -e .env.test jest",
+}
+```

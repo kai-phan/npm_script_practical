@@ -333,3 +333,12 @@ The environment variables are accessible from the `process.env` object,
     "test": "node ./scripts/test.js",
 }
 ```
+
+### Use bin file to run npm scripts
+
+```
+"scripts": {
+    "mycli": "mycli"
+}
+```
+

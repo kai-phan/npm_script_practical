@@ -6,6 +6,9 @@
   "config": {
     "port": "3030"
   },
+  "bin": {
+    "npm_script_practical": "./bin/index.js"
+  },
   "scripts": {
     "start": "node src/index.js",
     "poststart": "echo \"start done\"",
@@ -44,7 +47,8 @@
     "test-env": "cross-env NODE_ENV=hello jest && echo $NODE_ENV",
     "dot-env": "dotenv -e .env.test jest",
     "bash-lint": "bash scripts/test.sh",
-    "node-lint": "node scripts/test.js"
+    "node-lint": "node scripts/test.js",
+    "bin": "npm exec npm_script_practical"
   },
   "keywords": [],
   "author": "kai",

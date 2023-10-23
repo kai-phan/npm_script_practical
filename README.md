@@ -317,3 +317,11 @@ The environment variables are accessible from the `process.env` object,
     "test": "dotenv -e .env.test jest",
 }
 ```
+
+### Use bash file to run npm scripts
+
+```
+"scripts": {
+    "test": "bash ./scripts/test.sh",
+}
+```

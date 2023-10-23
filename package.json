@@ -42,7 +42,8 @@
     "prettier:verbose": "npm run prettier --loglevel verbose",
     "prettier:silent": "npm run prettier -s",
     "test-env": "cross-env NODE_ENV=hello jest && echo $NODE_ENV",
-    "dot-env": "dotenv -e .env.test jest"
+    "dot-env": "dotenv -e .env.test jest",
+    "bash-lint": "bash scripts/test.sh"
   },
   "keywords": [],
   "author": "kai",

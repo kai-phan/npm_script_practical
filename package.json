@@ -43,7 +43,8 @@
     "prettier:silent": "npm run prettier -s",
     "test-env": "cross-env NODE_ENV=hello jest && echo $NODE_ENV",
     "dot-env": "dotenv -e .env.test jest",
-    "bash-lint": "bash scripts/test.sh"
+    "bash-lint": "bash scripts/test.sh",
+    "node-lint": "node scripts/test.js"
   },
   "keywords": [],
   "author": "kai",
@@ -59,7 +60,8 @@
     "onchange": "^7.1.0",
     "opn-cli": "^5.0.0",
     "postcss": "^8.4.31",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "shelljs": "^0.8.5"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

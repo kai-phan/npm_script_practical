@@ -325,3 +325,11 @@ The environment variables are accessible from the `process.env` object,
     "test": "bash ./scripts/test.sh",
 }
 ```
+
+### Use node script to run npm scripts
+
+```
+"scripts": {
+    "test": "node ./scripts/test.js",
+}
+```

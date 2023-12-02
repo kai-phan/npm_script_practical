@@ -133,9 +133,12 @@ or
 
 ```
 "script" : {
-    "lint": "npm run lint:*",
+    "lint": "run-p lint:*",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier"
+}
+"devDependencies: {
+    "npm-run-all": "^4.1.5"
 }
 ```
 
@@ -341,4 +344,3 @@ The environment variables are accessible from the `process.env` object,
     "mycli": "mycli"
 }
 ```
-
